@@ -3,9 +3,6 @@ pipeline{
     tools {
       maven 'maven-3.8.2'
     }
-    environment {
-      DOCKER_TAG = getVersion()
-    }
     stages{
         stage('SCM'){
             steps{
