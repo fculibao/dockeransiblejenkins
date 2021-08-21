@@ -10,5 +10,12 @@ pipeline{
                     url: 'https://github.com/fculibao/dockeransiblejenkins'
             }
         }
+        
+        stage('Maven Build'){
+            steps{
+                sh "mvn clean package"
+            }
+        }
     }
+    
 }
