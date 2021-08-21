@@ -10,6 +10,7 @@ pipeline{
         stage('SCM'){
             steps{
                 git branch: 'main', credentialsId: 'git-pass', url: 'https://github.com/fculibao/dockeransiblejenkins.git'
+            }    
         }
         stage('Maven Build'){
             steps{
