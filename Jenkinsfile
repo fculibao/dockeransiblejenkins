@@ -9,7 +9,7 @@ pipeline{
     stages{
         stage('SCM'){
             steps{
-                git credentialsId: 'github', 
+                git credentialsId: 'git-pass', 
                     url: 'https://github.com/fculibao/dockeransiblejenkins'
             }
         }
