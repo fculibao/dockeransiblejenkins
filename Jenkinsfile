@@ -3,6 +3,9 @@ pipeline{
     tools {
       maven 'maven-3.8.2'
     }
+    environment {
+      DOCKER_TAG = getVersion()
+    }
  
     stages{
         stage('SCM'){
@@ -24,3 +27,10 @@ pipeline{
     }
     
 }
+script {
+    def getVersion(){
+        def commitHash = sh label: '', returnStdout: true, script: 'git rev-parse --short HEAD'
+        return commitHash
+}
+
+}  
