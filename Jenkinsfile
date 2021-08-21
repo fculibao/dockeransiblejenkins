@@ -24,6 +24,14 @@ pipeline{
                 sh "docker build . -t fculibao/nodeapp:${DOCKER_TAG}"
             }
         }
+        stage('DockerHub Push'){
+            steps{
+                withCredentials([string(credentialsId: 'docker-access-pwd', variable: 'dockerHubPwd')]) {
+                sh "docker login -u fculibao -p ${dockerHubPwd}"
+                }
+                sh "docker push fculibao/nodeapp:${DOCKER_TAG}"
+            }
+        }
     }
     
 }
