@@ -18,7 +18,7 @@ pipeline{
 
         stage('Docker Build'){
             steps{
-                sh "docker build . -t fculibao/nodeapp:${DOCKER_TAG} "
+                sh "docker build . -t fculibao/nodeapp:0.0.1 "
             }
         }
     }
