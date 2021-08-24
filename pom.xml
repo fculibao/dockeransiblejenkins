@@ -5,7 +5,7 @@
   <artifactId>dockeransible</artifactId>
   <packaging>war</packaging>
   <version>1.0-SNAPSHOT</version>
-  <name>dockeransible Maven Webapp 02</name>
+  <name>dockeransible Maven Webapp 03</name>
   <url>http://maven.apache.org</url>
   <dependencies>
     <dependency>
@@ -16,6 +16,6 @@
     </dependency>
   </dependencies>
   <build>
-    <finalName>dockeransible</finalName>
+    <finalName>dockeransible-fc.0.0.1</finalName>
   </build>
 </project>
